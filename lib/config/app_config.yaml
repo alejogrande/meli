@@ -1,0 +1,6 @@
+baseUrl: "https://mercadolibre"
+apiKey: "00000000000000000000"
+hash: "fc221941ec9a1afab7399d338fe4e020"
+connectTimeOut: 120000
+receiveTimeOut: 120000
+ts: 1
