@@ -41,6 +41,10 @@ A new Flutter project with [Mercadolibre API](https://developers.mercadolibre.co
   
 </p>
 
+## Download APK
+
+[Click here](https://drive.google.com/file/d/1saDmn5fw6AKoXJCHVLVF3YciUNdVChgp/view?usp=sharing) to download the application from Google Drive
+
 ## How to use
 
 To clone and run this application, you'll need [Git](https://git-scm.com/downloads) and [Flutter](https://flutter.dev/docs/get-started/install) installed on your computer. From your command line:
