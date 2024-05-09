@@ -6,6 +6,6 @@ import 'package:flutter/material.dart';
 
 final Map<String, Widget Function(BuildContext)> appRoutes = {
   Routes.home: (_) => const HomePage(),
-  Routes.productDetail: (_) => const ProductDetailPage(),
+  Routes.productDetail: (_) => const ProductDetailPage(product: null,),
   Routes.searchList: (_) => const SearchListPage(),
 };

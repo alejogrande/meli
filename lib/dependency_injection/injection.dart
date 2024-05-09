@@ -3,6 +3,7 @@ import 'package:challenge_meli/data/model/app_config_model.dart';
 import 'package:challenge_meli/data/respositories/meli_repository_impl.dart';
 import 'package:challenge_meli/domain/entities/app_config_entity.dart';
 import 'package:challenge_meli/domain/respositories/meli_repository.dart';
+import 'package:challenge_meli/domain/use_cases/get_meli_api.dart';
 import 'package:challenge_meli/ui/pages/home/bloc/home_bloc.dart';
 import 'package:challenge_meli/ui/pages/product_detail/bloc/product_detail_bloc.dart';
 import 'package:challenge_meli/ui/pages/search_list/bloc/search_list_bloc.dart';
@@ -19,15 +20,15 @@ Future<void> init() async {
   late AppConfig appConfig = AppConfigModel.fromMap(yamlMap);
   // bloc
 
-  locator.registerFactory(() => HomeBloc());
-  locator.registerFactory(() => SearchListBloc());
+  locator.registerFactory(() => HomeBloc(locator()));
+  locator.registerFactory(() => SearchListBloc(locator()));
   locator.registerFactory(() => ProductDetailBloc());
 
   // cubit
 
 
   // usecase
-  // locator.registerLazySingleton(() => GetMeliApi(locator()));
+  locator.registerLazySingleton(() => GetMeliApi(locator()));
 
   // repository
   locator.registerLazySingleton<MeliRepository>(
@@ -40,9 +41,7 @@ Future<void> init() async {
         baseUrl: appConfig.baseUrl,
         connectTimeout: appConfig.connectTimeOut,
         receiveTimeOut: appConfig.receiveTimeOut,
-        hash: appConfig.hash,
         ts: appConfig.ts,
-        apiKey: appConfig.apiKey
       ));
 
   // external
