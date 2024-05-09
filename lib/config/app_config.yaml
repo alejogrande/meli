@@ -1,0 +1,6 @@
+baseUrl: "https://api.mercadolibre.com/sites/MCO"
+apiKey: "APP_USR-1789860938380279-050818-fc0011a732f7f0ddcbb2be9f6c4425ee-189180498"
+hash: "fc221941ec9a1afab7399d338fe4e020"
+connectTimeOut: 120000
+receiveTimeOut: 120000
+ts: 1
